@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-   
-  </div>
+  <div class="div"></div>
 </template>
 
 <script>
@@ -9,9 +7,13 @@
 
 
 export default {
-  name: 'Home',
+  name: 'Menu',
   components: {
     
   }
 }
 </script>
+
+<style lang="scss">
+@import "../styles/style.scss";
+</style>
