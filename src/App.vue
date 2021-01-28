@@ -1,26 +1,33 @@
 <template>
-  <div class="app">
-    <p class="app__logo"><a href="/" class="app__logo-link">coffee shop</a></p>
-    <div class="app__nav">
-      <router-link to="/">Меню</router-link> 
-      <router-link to="/beans">Кофе в зернах</router-link>
-      <router-link to="/contacts">Контакты</router-link>
+  <div id="app">
+    <div class="header">
+      <router-link class="header__logo-link" to="/">coffee shop</router-link>
+      <div class="header__nav">
+        <router-link to="/" class="header__nav-link">Меню</router-link> 
+        <router-link to="/beans" class="header__nav-link">Кофе в зернах</router-link>
+        <router-link to="/contacts" class="header__nav-link">Контакты</router-link>
+      </div>
+      <router-link class="header__contacts-link" to="/contacts"><Icon
+                
+                icon="location"
+                class="header__icon"
+              />ул. Ришельевская, 31</router-link>
     </div>
     <router-view/>
-    <a href="/contacts" class="app__contacts-link">ул. Ришельевская, 31</a>
   </div>
 </template>
 
 <script>
+import Icon from "./components/icons/Icons.vue";
 export default {
-
+components: {Icon}
 }
 </script>
 
 
 <style lang="scss">
 @import "./styles/style.scss";
-.app {
+.header {
   width: 100%;
   background-color: $black;
   display: flex;
@@ -31,12 +38,32 @@ export default {
   &__logo-link {
     text-transform: uppercase;
     font-size: $nav-logo;
-    font-weight: 400;
+    font-weight: 500;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__nav {
     width: 25%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-size: $nav;
+    font-weight: 400;
+  }
+  &__icon {
+    margin-right: 10px;
+    
+  }
+  &__contacts-link {
+    align-items: center;
+    display: flex;
+    &:hover .header__icon {
+      transform: scale(1.5);
+    }
+  }
+  &__nav-link:hover {
+    transform: scale(1.1);
   }
 }
 </style>

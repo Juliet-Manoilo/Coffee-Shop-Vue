@@ -1,19 +1,21 @@
 <template>
-  <div class="div"></div>
+  <div class="div">
+    <Video />
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Video from "../components/sections/Video.vue"
 
 
 export default {
   name: 'Menu',
-  components: {
-    
+  components: 
+  {Video}
   }
-}
+
 </script>
 
 <style lang="scss">
-@import "../styles/style.scss";
+
 </style>
