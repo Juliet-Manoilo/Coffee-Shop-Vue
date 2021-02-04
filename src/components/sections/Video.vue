@@ -1,7 +1,7 @@
 <template>
   <section class="video">
    
-<video> <source src="/src/components/sections/videoplayback.mp4" type="video/mp4" autoplay loop playsinline muted></video>
+<video> <source src="/videoplayback.mp4" type="video/mp4" autoplay loop playsinline ></video>
    
   </section>
 </template>
