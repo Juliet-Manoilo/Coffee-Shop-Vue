@@ -1,27 +1,30 @@
 <template>
-  <div id="app">
+  <div class="app">
     <div class="header">
       <router-link class="header__logo-link" to="/">coffee shop</router-link>
       <div class="header__nav">
-        <router-link to="/" class="header__nav-link">Меню</router-link> 
-        <router-link to="/beans" class="header__nav-link">Кофе в зернах</router-link>
-        <router-link to="/contacts" class="header__nav-link">Контакты</router-link>
+        <router-link to="/" class="header__nav-link">Меню</router-link>
+        <router-link to="/beans" class="header__nav-link"
+          >Кофе в зернах</router-link
+        >
+        <router-link to="/contacts" class="header__nav-link"
+          >Контакты</router-link
+        >
       </div>
-      <router-link class="header__contacts-link" to="/contacts"><Icon
-                
-                icon="location"
-                class="header__icon"
-              />ул. Ришельевская, 31</router-link>
+      <router-link class="header__contacts-link" to="/contacts"
+        ><Icon icon="location" class="header__icon" />ул. Ришельевская,
+        31</router-link
+      >
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 import Icon from "./components/icons/Icons.vue";
 export default {
-components: {Icon}
-}
+  components: { Icon },
+};
 </script>
 
 
@@ -35,16 +38,18 @@ components: {Icon}
   min-height: 70px;
   justify-content: space-around;
   align-items: center;
+  margin: auto;
   &__logo-link {
     text-transform: uppercase;
     font-size: $nav-logo;
     font-weight: 500;
+    font-family: $logo-font;
     &:hover {
       transform: scale(1.1);
     }
   }
   &__nav {
-    width: 25%;
+    width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +58,6 @@ components: {Icon}
   }
   &__icon {
     margin-right: 10px;
-    
   }
   &__contacts-link {
     align-items: center;
@@ -65,6 +69,10 @@ components: {Icon}
   &__nav-link:hover {
     transform: scale(1.1);
   }
+}
+
+.app {
+  background-color: $black;
 }
 </style>
 
