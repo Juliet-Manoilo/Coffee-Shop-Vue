@@ -13,12 +13,8 @@
       <h1 class="video__title">7-й кофе в подарок</h1>
       <p class="video__description">получи карточку и фиксируй заказы</p>
       <div class="video__buttons">
-        <button class="video__btn">
-          <a href="" class="video__link">меню</a>
-        </button>
-        <button class="video__btn">
-          <a href="/beans" class="video__link">кофе в зернах</a>
-        </button>
+        <a href="" class="video__link">меню</a>
+        <a href="/beans" class="video__link">кофе в зернах</a>
       </div>
     </div>
   </section>
@@ -37,7 +33,6 @@ export default {
 @import "/src/styles/style.scss";
 .video {
   width: 100%;
-
   position: relative;
   font-weight: 500;
   &__bcg {
@@ -68,22 +63,6 @@ export default {
     font-size: $nav-logo;
     font-weight: 700;
   }
-  &__btn {
-    outline: none;
-    background-color: transparent;
-    color: $main-color;
-    border: 1px solid $main-color;
-    width: 192px;
-    height: 42px;
-    font-size: $btn;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &:hover {
-      background-color: $main-color;
-      color: $black;
-    }
-  }
   &__buttons {
     display: flex;
     width: 30%;
@@ -93,6 +72,20 @@ export default {
   &__link {
     width: 100%;
     vertical-align: center;
+    background-color: transparent;
+    color: $main-color;
+    border: 1px solid $main-color;
+    width: 192px;
+    height: 42px;
+    font-size: $btn;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: $main-color;
+      color: $black;
+    }
   }
 }
 </style>

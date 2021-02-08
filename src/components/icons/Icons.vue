@@ -4,15 +4,18 @@
 <script>
 const getName = (name) => `icon-${name}`;
 export default {
-  name: 'Icon',
+  name: "Icon",
   props: {
     icon: {
       type: String,
     },
   },
   components: {
-    [getName('location')]: () => import('./Location.vue'),
-    
+    [getName("location")]: () => import("./Location.vue"),
+    [getName("tracery")]: () => import("./tracery.vue"),
+    [getName("coffeemachine")]: () => import("./Coffeemachine"),
+    [getName("crescent")]: () => import("./crescent.vue"),
+    [getName("gift")]: () => import("./Gift.vue"),
   },
   computed: {
     getIcon() {
