@@ -1,13 +1,14 @@
 <template>
-  <div class="advantages" v-if="advantagesList.length > 0">
+  <div class="advantages">
     <Icon icon="tracery" class="advantages__icon" />
     <ul class="advantages__list">
       <li
+        v-for="advantage in advantagesList"
         class="advantages__item"
-        :key="advantagesList.icon"
-        v-for="icon in advantagesList"
+        :key="advantage.id"
       >
-        {{ advantagesList.icon }}
+        {{ advantage.icon }}
+        <h2>{{ advantage.title }}</h2>
       </li>
     </ul>
   </div>

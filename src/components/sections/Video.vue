@@ -82,6 +82,10 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
     &:hover {
       background-color: $main-color;
       color: $black;
