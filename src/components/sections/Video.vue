@@ -13,8 +13,8 @@
       <h1 class="video__title">7-й кофе в подарок</h1>
       <p class="video__description">получи карточку и фиксируй заказы</p>
       <div class="video__buttons">
-        <a href="" class="video__link">меню</a>
-        <a href="/beans" class="video__link">кофе в зернах</a>
+        <a href="#" class="video__link">меню</a>
+        <a href="#" class="video__link">кофе в зернах</a>
       </div>
     </div>
   </section>
@@ -35,8 +35,11 @@ export default {
   width: 100%;
   position: relative;
   font-weight: 500;
+  z-index: 100;
+
   &__bcg {
     width: 100%;
+    z-index: 100;
   }
   &__content {
     position: absolute;

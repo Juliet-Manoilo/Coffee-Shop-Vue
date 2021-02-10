@@ -9,6 +9,7 @@
       >
         {{ advantage.icon }}
         <h2>{{ advantage.title }}</h2>
+        <p>{{ advantage.description }}</p>
       </li>
     </ul>
   </div>
@@ -16,7 +17,7 @@
 
 <script>
 import Icon from "../icons/Icons.vue";
-import advantagesList from "./data.js";
+import { advantagesList } from "./data.js";
 export default {
   name: "Advantages",
   components: { Icon },
@@ -35,9 +36,24 @@ export default {
 @import "/src/styles/style.scss";
 .advantages {
   position: relative;
+  z-index: 1;
+  padding: 30px;
   &__list {
     display: flex;
     justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  &__item {
+    width: 30%;
+  }
+  &__icon {
+    transform: rotate(135.06deg) scaleX(-1);
+
+    position: absolute;
+    left: -100px;
+    top: -150px;
   }
 }
 </style>

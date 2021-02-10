@@ -1,16 +1,19 @@
+//import Icon from "../icons/Icons.vue";
+
+
 export const advantagesList = [
 {
     id: 1,
-    icon: require("../icons/Coffeemachine.vue"),
+    icon: require('../icons/Coffeemachine.vue'),
     title: 'Отличное качество кофе',
     description: 'Покупаем свежие зерна только у проверенных поставщиков. Обжариваем, мелем и варим мега вкусный кофе. Все кто пробовал наш кофе - теперь наши постоянные клиенты.',
 },
 { id: 2,
-    icon: require("../icons/crescent.vue"),
+    icon: require('../icons/crescent.vue'),
     title: 'Отличное качество кофе',
     description: 'Покупаем свежие зерна только у проверенных поставщиков. Обжариваем, мелем и варим мега вкусный кофе. Все кто пробовал наш кофе - теперь наши постоянные клиенты.',},
 { id: 3,
-    icon: require("../icons/Gift.vue"),
+    icon: require('../icons/Gift.vue'),
     title: 'Отличное качество кофе',
     description: 'Покупаем свежие зерна только у проверенных поставщиков. Обжариваем, мелем и варим мега вкусный кофе. Все кто пробовал наш кофе - теперь наши постоянные клиенты.',},
 ];
