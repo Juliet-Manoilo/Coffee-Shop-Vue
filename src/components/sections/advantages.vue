@@ -7,8 +7,10 @@
         class="advantages__item"
         :key="advantage.id"
       >
-        {{ advantage.icon }}
-        <h2>{{ advantage.title }}</h2>
+        <svg>
+          <use :xlink:href="`#${iconNames[advantage.icon]}`" />
+        </svg>
+        <h2 class="advantages__title">{{ advantage.title }}</h2>
         <p>{{ advantage.description }}</p>
       </li>
     </ul>
@@ -16,6 +18,7 @@
 </template>
 
 <script>
+import iconNames from "../icons/icons.js";
 import Icon from "../icons/Icons.vue";
 import { advantagesList } from "./data.js";
 export default {
@@ -24,6 +27,7 @@ export default {
   data() {
     return {
       advantagesList,
+      iconNames: iconNames,
     };
   },
   // props: {
@@ -47,13 +51,30 @@ export default {
   }
   &__item {
     width: 30%;
+    z-index: 50;
   }
   &__icon {
     transform: rotate(135.06deg) scaleX(-1);
-
+    z-index: 2;
     position: absolute;
     left: -100px;
-    top: -150px;
+    top: -180px;
+  }
+  &__title {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 54px;
+      border-bottom: 2px solid $main-color;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 </style>

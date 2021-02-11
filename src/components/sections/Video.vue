@@ -14,7 +14,7 @@
       <p class="video__description">получи карточку и фиксируй заказы</p>
       <div class="video__buttons">
         <a href="#" class="video__link">меню</a>
-        <a href="#" class="video__link">кофе в зернах</a>
+        <a href="/src/views/Beans.vue" class="video__link">кофе в зернах</a>
       </div>
     </div>
   </section>

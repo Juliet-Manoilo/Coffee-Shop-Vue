@@ -44,17 +44,19 @@ export default {
     font-size: $nav-logo;
     font-weight: 500;
     font-family: $logo-font;
+    margin-right: 30px;
     &:hover {
       transform: scale(1.1);
     }
   }
   &__nav {
-    width: 30%;
+    width: 33%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: $nav;
     font-weight: 400;
+    padding-left: 20px;
   }
   &__icon {
     margin-right: 10px;
