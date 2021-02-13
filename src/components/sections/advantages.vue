@@ -7,18 +7,16 @@
         class="advantages__item"
         :key="advantage.id"
       >
-        <svg>
-          <use :xlink:href="`#${iconNames[advantage.icon]}`" />
-        </svg>
+        <Icon :icon="advantage.icon" />
         <h2 class="advantages__title">{{ advantage.title }}</h2>
-        <p>{{ advantage.description }}</p>
+        <p class="advantages__description">{{ advantage.description }}</p>
+        <span class="advantages__undertext">{{ advantage.smallText }}</span>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import iconNames from "../icons/icons.js";
 import Icon from "../icons/Icons.vue";
 import { advantagesList } from "./data.js";
 export default {
@@ -27,7 +25,6 @@ export default {
   data() {
     return {
       advantagesList,
-      iconNames: iconNames,
     };
   },
   // props: {
@@ -42,6 +39,8 @@ export default {
   position: relative;
   z-index: 1;
   padding: 30px;
+  font-family: $main-font;
+  margin-bottom: 50px;
   &__list {
     display: flex;
     justify-content: space-around;
@@ -66,6 +65,8 @@ export default {
     padding-bottom: 20px;
     margin-bottom: 20px;
     position: relative;
+    font-size: $nav-logo;
+    font-weight: 600;
     &::after {
       position: absolute;
       content: "";
@@ -75,6 +76,17 @@ export default {
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+  &__description {
+    font-size: $nav;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+  &__undertext {
+    font-size: $footer;
+    font-weight: 300;
+    color: $light-grey;
   }
 }
 </style>

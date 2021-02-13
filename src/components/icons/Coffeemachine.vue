@@ -1,6 +1,5 @@
 <template>
   <svg
-    id="Coffeemachine"
     width="75"
     height="69"
     viewBox="0 0 75 69"

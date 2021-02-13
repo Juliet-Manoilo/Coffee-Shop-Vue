@@ -16,6 +16,10 @@ export default {
     [getName("coffeemachine")]: () => import("./Coffeemachine"),
     [getName("crescent")]: () => import("./crescent.vue"),
     [getName("gift")]: () => import("./Gift.vue"),
+    [getName("coffee-hot")]: () => import("./Coffee-hot.vue"),
+    [getName("icecoffee")]: () => import("./Icecoffee.vue"),
+    [getName("tea")]: () => import("./Tea.vue"),
+    [getName("bakery")]: () => import("./Tea.vue"),
   },
   computed: {
     getIcon() {
