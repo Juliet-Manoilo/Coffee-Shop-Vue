@@ -1,9 +1,12 @@
  <template>
-  <div class="menu" id="menu">
-    <Icon icon="tracery" class="menu__icon" />
+  <section class="menu" id="menu">
+    <div class="menu__icon-wrapper">
+      <Icon icon="tracery" class="menu__icon" />
+    </div>
     <h2 class="menu__title">меню</h2>
     <div class="menu__row">
-      <img src="./menu1.png" alt="coffee" />
+      <img src="@/assets/menu1.png" alt="coffee" class="menu__img" />
+
       <div class="menu__content">
         <h3 class="menu__subtitle-name">
           <Icon icon="coffee-hot" class="menu__icon-title" />Кофе
@@ -21,18 +24,40 @@
         </div>
       </div>
     </div>
-  </div>
+    <div class="menu__row">
+      <div class="menu__content">
+        <h3 class="menu__subtitle-name">
+          <Icon icon="icecoffee" class="menu__icon-title" />Кофе со льдом
+        </h3>
+        <div
+          class="menu__positions--second"
+          v-for="position in iceCoffee"
+          :key="position.id"
+        >
+          <span class="menu__name">{{ position.name }}</span>
+          <div class="menu__characteristics">
+            <span class="menu__quantity">{{ position.ml }}мл</span>
+            <span class="menu__price">{{ position.price }}грн</span>
+          </div>
+        </div>
+      </div>
+      <img src="@/assets/menu2.png" alt="coffee" class="menu__img" />
+    </div>
+    <Icon icon="tracery" class="menu__icon--second" />
+  </section>
 </template>
 
 <script>
 import Icon from "../icons/Icons.vue";
 import { coffeeMenu } from "./data.js";
+import { iceCoffee } from "./data.js";
 export default {
   name: "MenuList",
   components: { Icon },
   data() {
     return {
       coffeeMenu,
+      iceCoffee,
     };
   },
 };
@@ -41,9 +66,10 @@ export default {
 <style lang="scss">
 @import "/src/styles/style.scss";
 .menu {
-  width: 90%;
-  margin: auto;
+  width: 100%;
+
   position: relative;
+  margin: 0, 5%;
 
   &__title {
     text-transform: uppercase;
@@ -51,24 +77,33 @@ export default {
     margin-bottom: 20px;
     font-family: $title-font;
     font-size: $subtitle;
+    padding-left: 5%;
   }
   &__icon {
-    position: absolute;
-    right: -7%;
-    top: -110px;
+    transform: translateX(140px);
     z-index: 0;
+    &--second {
+      position: absolute;
+      left: -9%;
+      top: 45%;
+      transform: rotate(196deg);
+    }
   }
   &__content {
     font-size: $nav-logo;
     width: 40%;
     margin: auto;
+    display: inline-block;
   }
   &__icon-title {
     margin-right: 25px;
   }
   &__row {
     display: flex;
+    width: 90%;
+    margin: auto;
   }
+
   &__subtitle-name {
     display: flex;
     align-items: center;
@@ -104,9 +139,31 @@ export default {
         top: 20px;
       }
     }
+    &--second {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      font-size: $nav;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
   }
   &__price {
     font-weight: 600;
+  }
+  &__icon-wrapper {
+    position: absolute;
+    overflow-x: hidden;
+    right: 0;
+    top: -150px;
+  }
+
+  &__img {
+    width: 50%;
+    max-width: 100%;
+    &--right {
+      align-items: flex-end;
+    }
   }
 }
 </style>

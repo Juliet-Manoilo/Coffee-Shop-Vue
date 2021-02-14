@@ -127,3 +127,37 @@ export const coffeeMenu = [
         price: '25',
     },
 ]
+
+
+export const iceCoffee = [
+    {
+        id: 1,
+        name: 'Колд Брю',
+        ml: '300',
+        price: '32',
+    },
+    {
+        id: 2,
+        name: 'Ice Black',
+        ml: '400',
+        price: '30',
+    },
+    {
+        id: 3,
+        name: 'Холодный Латте',
+        ml: '400',
+        price: '28',
+    },
+    {
+        id: 4,
+        name: 'Кофе-тоник',
+        ml: '400',
+        price: '30',
+    },
+    {
+        id: 5,
+        name: 'Фреш кофе',
+        ml: '400',
+        price: '52',
+    },
+]
