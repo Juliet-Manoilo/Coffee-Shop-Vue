@@ -9,7 +9,7 @@
 <script>
 import Video from "../components/sections/Video.vue";
 import Advantages from "../components/sections/advantages.vue";
-import MenuList from "../components/sections/menu.vue";
+import MenuList from "../components/sections/menu-list.vue";
 
 export default {
   name: "Menu",

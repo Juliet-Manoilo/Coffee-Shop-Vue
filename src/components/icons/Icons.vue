@@ -13,7 +13,7 @@ export default {
   components: {
     [getName("location")]: () => import("./Location.vue"),
     [getName("tracery")]: () => import("./tracery.vue"),
-    [getName("coffeemachine")]: () => import("./Coffeemachine"),
+    [getName("coffeemachine")]: () => import("./Coffeemachine.vue"),
     [getName("crescent")]: () => import("./crescent.vue"),
     [getName("gift")]: () => import("./Gift.vue"),
     [getName("coffee-hot")]: () => import("./Coffee-hot.vue"),

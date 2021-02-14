@@ -7,7 +7,7 @@
         class="advantages__item"
         :key="advantage.id"
       >
-        <Icon :icon="advantage.icon" />
+        <Icon :icon="advantage.icon" class="advantages__icon-list" />
         <h2 class="advantages__title">{{ advantage.title }}</h2>
         <p class="advantages__description">{{ advantage.description }}</p>
         <span class="advantages__undertext">{{ advantage.smallText }}</span>
@@ -51,6 +51,15 @@ export default {
   &__item {
     width: 30%;
     z-index: 50;
+    &:hover .advantages__icon-list {
+      transform: translatey(-5px);
+      transition: 0.5s ease;
+    }
+    &:nth-child(2):hover .advantages__icon-list {
+      -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+      transition: 0.5s ease;
+    }
   }
   &__icon {
     transform: rotate(135.06deg) scaleX(-1);
@@ -60,7 +69,7 @@ export default {
     top: -180px;
   }
   &__title {
-    width: 70%;
+    width: 55%;
     margin: auto;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -87,6 +96,9 @@ export default {
     font-size: $footer;
     font-weight: 300;
     color: $light-grey;
+  }
+  &__icon-list {
+    margin-bottom: 30px;
   }
 }
 </style>
