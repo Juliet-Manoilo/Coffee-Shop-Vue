@@ -76,6 +76,7 @@ export default {
     position: relative;
     font-size: $nav-logo;
     font-weight: 600;
+    min-height: 25%;
     &::after {
       position: absolute;
       content: "";

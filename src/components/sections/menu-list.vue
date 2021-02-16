@@ -44,6 +44,43 @@
       <img src="@/assets/menu2.png" alt="coffee" class="menu__img" />
     </div>
     <Icon icon="tracery" class="menu__icon--second" />
+    <div class="menu__row">
+      <img src="@/assets/menu3.png" alt="coffee" class="menu__img" />
+
+      <div class="menu__content">
+        <h3 class="menu__subtitle-name">
+          <Icon icon="tea" class="menu__icon-title" />Чай, лимонад
+        </h3>
+        <div class="menu__positions" v-for="position in tea" :key="position.id">
+          <span class="menu__name">{{ position.name }}</span>
+          <div class="menu__characteristics">
+            <span class="menu__quantity">{{ position.ml }}мл</span>
+            <span class="menu__price">{{ position.price }}грн</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu__row">
+      <div class="menu__content">
+        <h3 class="menu__subtitle-name">
+          <Icon icon="bakery" class="menu__icon-title" />Выпечка
+        </h3>
+        <div
+          class="menu__positions--last"
+          v-for="position in bakery"
+          :key="position.id"
+        >
+          <span class="menu__name">{{ position.name }}</span>
+          <div class="menu__characteristics">
+            <span class="menu__price">{{ position.price }}грн</span>
+          </div>
+        </div>
+      </div>
+      <img src="@/assets/menu2.png" alt="coffee" class="menu__img" />
+    </div>
+    <div class="menu__icon-wrapper--last">
+      <Icon icon="tracery" class="menu__icon--last" />
+    </div>
   </section>
 </template>
 
@@ -51,6 +88,8 @@
 import Icon from "../icons/Icons.vue";
 import { coffeeMenu } from "./data.js";
 import { iceCoffee } from "./data.js";
+import { tea } from "./data.js";
+import { bakery } from "./data.js";
 export default {
   name: "MenuList",
   components: { Icon },
@@ -58,6 +97,8 @@ export default {
     return {
       coffeeMenu,
       iceCoffee,
+      tea,
+      bakery,
     };
   },
 };
@@ -67,7 +108,6 @@ export default {
 @import "/src/styles/style.scss";
 .menu {
   width: 100%;
-
   position: relative;
   margin: 0, 5%;
 
@@ -85,8 +125,12 @@ export default {
     &--second {
       position: absolute;
       left: -9%;
-      top: 45%;
+      top: 37%;
       transform: rotate(196deg);
+    }
+    &--last {
+      transform: translateX(120px);
+      z-index: 0;
     }
   }
   &__content {
@@ -147,6 +191,38 @@ export default {
       font-weight: 400;
       margin-bottom: 5px;
     }
+    &--last {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      font-size: $nav;
+      font-weight: 400;
+      margin-bottom: 5px;
+      &:nth-child(7) {
+        padding-top: 40px;
+        position: relative;
+        &::before {
+          content: "";
+          width: 100px;
+          border-top: 2px solid $main-color;
+          position: absolute;
+          left: 0;
+          top: 20px;
+        }
+      }
+      &:nth-child(9) {
+        padding-top: 40px;
+        position: relative;
+        &::before {
+          content: "";
+          width: 100px;
+          border-top: 2px solid $main-color;
+          position: absolute;
+          left: 0;
+          top: 20px;
+        }
+      }
+    }
   }
   &__price {
     font-weight: 600;
@@ -156,11 +232,19 @@ export default {
     overflow-x: hidden;
     right: 0;
     top: -150px;
+    &--last {
+      position: absolute;
+      overflow-x: hidden;
+      right: 0;
+      bottom: -5%;
+      z-index: 0;
+    }
   }
 
   &__img {
     width: 50%;
     max-width: 100%;
+    z-index: 10;
     &--right {
       align-items: flex-end;
     }

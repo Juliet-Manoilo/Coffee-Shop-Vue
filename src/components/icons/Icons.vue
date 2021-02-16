@@ -19,7 +19,7 @@ export default {
     [getName("coffee-hot")]: () => import("./Coffee-hot.vue"),
     [getName("icecoffee")]: () => import("./Icecoffee.vue"),
     [getName("tea")]: () => import("./Tea.vue"),
-    [getName("bakery")]: () => import("./Tea.vue"),
+    [getName("bakery")]: () => import("./Bakery.vue"),
   },
   computed: {
     getIcon() {
