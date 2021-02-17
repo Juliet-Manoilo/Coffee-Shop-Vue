@@ -1,6 +1,7 @@
 <template>
   <div class="advantages">
-    <Icon icon="tracery" class="advantages__icon" />
+    <Icon icon="tracery" class="advantages__icon" v-if="showinfo" />
+    <h1>ПОЧЕМУ НАШ КОФЕ ВСЕГДА ОЧЕНЬ ВКУСНЫЙ</h1>
     <ul class="advantages__list">
       <li
         v-for="advantage in advantagesList"
@@ -18,17 +19,20 @@
 
 <script>
 import Icon from "../icons/Icons.vue";
-import { advantagesList } from "./data.js";
+import { advantagesList, whyTasty } from "./data.js";
 export default {
   name: "Advantages",
   components: { Icon },
+  props: {
+    showInfo: Boolean,
+    list: Array,
+  },
   data() {
     return {
       advantagesList,
+      whyTasty,
     };
   },
-  // props: {
-  // msg: String
 };
 </script>
 
