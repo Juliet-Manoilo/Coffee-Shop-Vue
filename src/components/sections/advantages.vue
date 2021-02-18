@@ -1,17 +1,20 @@
 <template>
   <div class="advantages">
-    <Icon icon="tracery" class="advantages__icon" v-if="showinfo" />
-    <h1>ПОЧЕМУ НАШ КОФЕ ВСЕГДА ОЧЕНЬ ВКУСНЫЙ</h1>
+    <Icon icon="tracery" class="advantages__icon" v-if="showInfo" />
+    <h1 class="advantages__main-title" v-if="!showInfo">
+      ПОЧЕМУ НАШ КОФЕ ВСЕГДА ОЧЕНЬ ВКУСНЫЙ
+    </h1>
     <ul class="advantages__list">
-      <li
-        v-for="advantage in advantagesList"
-        class="advantages__item"
-        :key="advantage.id"
-      >
-        <Icon :icon="advantage.icon" class="advantages__icon-list" />
-        <h2 class="advantages__title">{{ advantage.title }}</h2>
-        <p class="advantages__description">{{ advantage.description }}</p>
-        <span class="advantages__undertext">{{ advantage.smallText }}</span>
+      <li v-for="item in list" class="advantages__item" :key="item.id">
+        <Icon v-if="showInfo" :icon="item.icon" class="advantages__icon-list" />
+        <img
+          v-else
+          :src="require(`@/assets/tasty${item.id}.png`)"
+          alt="coffee"
+        />
+        <h2 class="advantages__title">{{ item.title }}</h2>
+        <p class="advantages__description">{{ item.description }}</p>
+        <span class="advantages__undertext">{{ item.smallText }}</span>
       </li>
     </ul>
   </div>
@@ -19,7 +22,6 @@
 
 <script>
 import Icon from "../icons/Icons.vue";
-import { advantagesList, whyTasty } from "./data.js";
 export default {
   name: "Advantages",
   components: { Icon },
@@ -27,15 +29,8 @@ export default {
     showInfo: Boolean,
     list: Array,
   },
-  data() {
-    return {
-      advantagesList,
-      whyTasty,
-    };
-  },
 };
 </script>
-
 
 <style lang="scss">
 @import "/src/styles/style.scss";
@@ -80,7 +75,7 @@ export default {
     position: relative;
     font-size: $nav-logo;
     font-weight: 600;
-    min-height: 25%;
+    //min-height: 25%;
     &::after {
       position: absolute;
       content: "";
@@ -103,6 +98,11 @@ export default {
     color: $light-grey;
   }
   &__icon-list {
+    margin-bottom: 30px;
+  }
+  &__main-title {
+    padding-left: 5%;
+    color: $main-color;
     margin-bottom: 30px;
   }
 }

@@ -110,7 +110,7 @@ export default {
   width: 100%;
   position: relative;
   margin: 0, 5%;
-
+  margin-bottom: 50px;
   &__title {
     text-transform: uppercase;
     color: $main-color;
@@ -127,9 +127,10 @@ export default {
       left: -9%;
       top: 37%;
       transform: rotate(196deg);
+      z-index: 0;
     }
     &--last {
-      transform: translateX(120px);
+      transform: translateX(120px) rotateX(10deg);
       z-index: 0;
     }
   }
@@ -138,6 +139,7 @@ export default {
     width: 40%;
     margin: auto;
     display: inline-block;
+    z-index: 10;
   }
   &__icon-title {
     margin-right: 25px;
