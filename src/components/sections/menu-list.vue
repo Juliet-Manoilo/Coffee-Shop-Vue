@@ -130,8 +130,7 @@ export default {
       z-index: 0;
     }
     &--last {
-      transform: translateX(120px) rotateX(10deg);
-      z-index: 0;
+      transform: rotate(270deg) translateY(130px);
     }
   }
   &__content {
@@ -238,8 +237,9 @@ export default {
       position: absolute;
       overflow-x: hidden;
       right: 0;
-      bottom: -5%;
+      bottom: -11%;
       z-index: 0;
+      height: 600px;
     }
   }
 

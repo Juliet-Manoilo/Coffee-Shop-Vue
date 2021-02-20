@@ -8,6 +8,7 @@
       <li v-for="item in list" class="advantages__item" :key="item.id">
         <Icon v-if="showInfo" :icon="item.icon" class="advantages__icon-list" />
         <img
+          class="advantages__image"
           v-else
           :src="require(`@/assets/tasty${item.id}.png`)"
           alt="coffee"
@@ -39,11 +40,13 @@ export default {
   z-index: 1;
   padding: 30px;
   font-family: $main-font;
-  margin-bottom: 50px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 60px;
   &__list {
     display: flex;
-    justify-content: space-around;
-    width: 90%;
+    justify-content: space-between;
+    width: 100%;
     margin: auto;
     text-align: center;
   }
@@ -68,14 +71,14 @@ export default {
     top: -180px;
   }
   &__title {
-    width: 55%;
+    width: 70%;
     margin: auto;
     padding-bottom: 20px;
     margin-bottom: 20px;
     position: relative;
     font-size: $nav-logo;
     font-weight: 600;
-    //min-height: 25%;
+    min-height: 80px;
     &::after {
       position: absolute;
       content: "";
@@ -101,8 +104,11 @@ export default {
     margin-bottom: 30px;
   }
   &__main-title {
-    padding-left: 5%;
     color: $main-color;
+    margin-bottom: 30px;
+  }
+  &__image {
+    width: 100%;
     margin-bottom: 30px;
   }
 }

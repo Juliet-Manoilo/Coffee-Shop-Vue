@@ -4,6 +4,7 @@
     <Advantages :list="advantagesList" :showInfo="true" />
     <MenuList />
     <Advantages :list="whyTasty" />
+    <Slider />
   </div>
 </template>
 
@@ -12,11 +13,11 @@ import Video from "../components/sections/Video.vue";
 import Advantages from "../components/sections/advantages.vue";
 import MenuList from "../components/sections/menu-list.vue";
 import { advantagesList, whyTasty } from "../components/sections/data.js";
-//import whyTaste from "../components/sections/why-tasty.vue";
+import Slider from "../components/sections/Slider.vue";
 
 export default {
   name: "Menu",
-  components: { Video, Advantages, MenuList },
+  components: { Video, Advantages, MenuList, Slider },
   data() {
     return {
       advantagesList,
