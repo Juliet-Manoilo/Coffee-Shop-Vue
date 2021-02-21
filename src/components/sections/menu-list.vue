@@ -1,5 +1,5 @@
  <template>
-  <section class="menu" id="menu">
+  <section class="menu" id="menu-list">
     <div class="menu__icon-wrapper">
       <Icon icon="tracery" class="menu__icon" />
     </div>

@@ -106,6 +106,8 @@ export default {
   &__main-title {
     color: $main-color;
     margin-bottom: 30px;
+    font-family: $title-font;
+    font-size: $subtitle;
   }
   &__image {
     width: 100%;

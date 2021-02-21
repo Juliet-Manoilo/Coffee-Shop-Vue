@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <section class="app">
     <div class="header">
       <router-link class="header__logo-link" to="/">coffee shop</router-link>
       <div class="header__nav">
@@ -17,7 +17,8 @@
       >
     </div>
     <router-view />
-  </div>
+    <footer>blaslfjbvsbf</footer>
+  </section>
 </template>
 
 <script>

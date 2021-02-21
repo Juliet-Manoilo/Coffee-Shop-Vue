@@ -1,11 +1,11 @@
 <template>
-  <div class="div">
+  <section class="main-page" id="main-page">
     <Video />
     <Advantages :list="advantagesList" :showInfo="true" />
     <MenuList />
     <Advantages :list="whyTasty" />
     <Slider />
-  </div>
+  </section>
 </template>
 
 <script>

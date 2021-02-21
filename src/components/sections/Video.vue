@@ -13,7 +13,7 @@
       <h1 class="video__title">7-й кофе в подарок</h1>
       <p class="video__description">получи карточку и фиксируй заказы</p>
       <div class="video__buttons">
-        <a href="./menu-list.vue" class="video__link">меню</a>
+        <a href="#menu-list" class="video__link">меню</a>
         <router-link to="/beans" class="video__link">кофе в зернах</router-link>
       </div>
     </div>
