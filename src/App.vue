@@ -3,7 +3,7 @@
     <header class="header">
       <router-link class="header__logo-link" to="/">coffee shop</router-link>
       <div class="header__nav">
-        <router-link to="/" class="header__nav-link">Меню</router-link>
+        <a href="#menu-list" class="header__nav-link">Меню</a>
         <router-link to="/beans" class="header__nav-link"
           >Кофе в зернах</router-link
         >
@@ -95,7 +95,7 @@ export default {
 @import "./styles/style.scss";
 .header {
   width: 100%;
-  background-color: $black;
+  background-color: $total-black;
   display: flex;
   color: $main-color;
   min-height: 70px;

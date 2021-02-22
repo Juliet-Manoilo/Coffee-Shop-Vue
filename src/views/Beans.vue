@@ -1,16 +1,14 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Market />
   </div>
 </template>
 <script>
-
+import Market from "../components/sections/Market.vue";
 export default {
-  name: 'Beans',
-  components: {
-    
-  }
-}
+  name: "Beans",
+  components: { Market },
+};
 </script>
 
 <style lang='scss'>
