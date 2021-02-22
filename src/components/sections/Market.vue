@@ -3,15 +3,24 @@
     <div class="market__icon-wrapper">
       <Icon icon="tracery" class="market__icon" />
     </div>
-    <div class="content-wrapper"></div>
+    <div class="content-wrapper">
+      <Advantages :list="beansList" />
+    </div>
   </section>
 </template>
 
 <script>
 import Icon from "../icons/Icons.vue";
+import { beansList } from "./data.js";
+import Advantages from "../sections/advantages.vue";
 export default {
   name: "Market",
-  components: { Icon },
+  components: { Icon, Advantages },
+  data() {
+    return {
+      beansList,
+    };
+  },
 };
 </script>
 

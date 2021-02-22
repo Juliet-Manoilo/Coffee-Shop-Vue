@@ -1,7 +1,7 @@
 <template>
-  <div class="about">
+  <section class="beans">
     <Market />
-  </div>
+  </section>
 </template>
 <script>
 import Market from "../components/sections/Market.vue";
