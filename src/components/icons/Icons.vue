@@ -21,6 +21,8 @@ export default {
     [getName("tea")]: () => import("./Tea.vue"),
     [getName("bakery")]: () => import("./Bakery.vue"),
     [getName("arrow")]: () => import("./Arrow.vue"),
+    [getName("facebook")]: () => import("./Facebook.vue"),
+    [getName("instagram")]: () => import("./Instagram.vue"),
   },
   computed: {
     getIcon() {

@@ -1,6 +1,6 @@
 <template>
   <section class="app">
-    <div class="header">
+    <header class="header">
       <router-link class="header__logo-link" to="/">coffee shop</router-link>
       <div class="header__nav">
         <router-link to="/" class="header__nav-link">Меню</router-link>
@@ -15,9 +15,71 @@
         ><Icon icon="location" class="header__icon" />ул. Ришельевская,
         31</router-link
       >
-    </div>
+    </header>
     <router-view />
-    <footer>blaslfjbvsbf</footer>
+    <footer class="footer">
+      <div class="footer__content-wrapper">
+        <div class="footer__copyright">
+          <a href="#main-page" class="footer__logo">coffee shop</a>
+          <p class="footer__authors-wrapper">
+            <span class="footer__author"
+              >© Developer: Juliet Manoilo, 2021</span
+            >
+            <span class="footer__author"
+              >© UI/UX-designer: Mariia Slasna, 2021</span
+            >
+          </p>
+        </div>
+        <div class="footer__col-nav">
+          <div class="footer__nav-links">
+            <a href="#menu-list" class="footer__nav-link">меню</a>
+            <router-link to="/beans" class="footer__nav-link">
+              кофе в зернах
+            </router-link>
+          </div>
+          <div class="footer__time">
+            <span class="footer__time-info">график работы: </span>
+            <span class="footer__time-info">пн-вс 8:00 - 22:00</span>
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <router-link to="/contacts" class="footer__nav-link">
+            контакты:
+          </router-link>
+          <div class="footer__adresses">
+            <span class="footer__adress">Одесса, ул.Ришельевская, 31</span>
+            <a href="tel:+38098786754635" class="footer__tel"
+              >+38098786754635</a
+            >
+          </div>
+          <div class="footer__adresses">
+            <span class="footer__adress">Одесса, ул.Садовая, 31</span>
+            <a href="tel:+38098786754635" class="footer__tel"
+              >+38098786754635</a
+            >
+          </div>
+        </div>
+        <div class="footer__col-nav">
+          <div class="footer__adresses">
+            <span class="footer__adress">Одесса, ул.Степовая, 31</span>
+            <a href="tel:+38098786754635" class="footer__tel"
+              >+38098786754635</a
+            >
+          </div>
+          <div class="footer__social-links">
+            <a href="www.instagram.com" class="footer__insta"
+              ><Icon icon="instagram"
+            /></a>
+            <a href="www.facebook.com"><Icon icon="facebook" /></a>
+          </div>
+        </div>
+        <Icon icon="tracery" class="footer__icon" />
+      </div>
+      <Icon icon="tracery" class="footer__icon--second" />
+      <div class="footer__icon-wrapper">
+        <Icon icon="tracery" class="footer__icon--third" />
+      </div>
+    </footer>
   </section>
 </template>
 
@@ -40,6 +102,7 @@ export default {
   justify-content: space-around;
   align-items: center;
   margin: auto;
+
   &__logo-link {
     text-transform: uppercase;
     font-size: $nav-logo;
@@ -76,6 +139,120 @@ export default {
 
 .app {
   background-color: $black;
+}
+
+.footer {
+  height: 30vh;
+  color: $footer-color;
+  overflow: hidden;
+  font-size: $footer;
+  position: relative;
+  background-color: $total-black;
+  padding-top: 3%;
+  &__icon {
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    transform: rotate(156deg);
+    z-index: 0;
+    &--second {
+      position: absolute;
+      bottom: -63%;
+      right: 10%;
+      transform: rotate(100deg);
+      z-index: 0;
+    }
+    &--third {
+      transform: rotate(25deg) translateX(160px);
+      z-index: 0;
+    }
+  }
+  &__content-wrapper {
+    width: 90%;
+    margin: auto;
+    z-index: 100;
+    height: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__copyright {
+    display: inline-flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-between;
+    width: 20%;
+  }
+  &__logo {
+    text-transform: uppercase;
+    font-family: $logo-font;
+    font-size: $nav-logo;
+    z-index: 100;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.1s ease;
+    }
+  }
+  &__authors-wrapper {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  &__author {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__col-nav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    z-index: 100;
+  }
+  &__nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-between;
+  }
+  &__time {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-between;
+  }
+  &__contacts {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    z-index: 100;
+  }
+  &__adresses {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    justify-content: space-between;
+  }
+  &__insta {
+    margin-right: 20px;
+  }
+  &__nav-link {
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.1s ease;
+    }
+  }
+  &__icon-wrapper {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    bottom: -20%;
+  }
 }
 </style>
 
