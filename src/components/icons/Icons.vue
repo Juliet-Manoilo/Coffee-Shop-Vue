@@ -24,6 +24,8 @@ export default {
     [getName("facebook")]: () => import("./Facebook.vue"),
     [getName("instagram")]: () => import("./Instagram.vue"),
     [getName("arrow-left")]: () => import("./Arrow-left.vue"),
+    [getName("phone")]: () => import("./Phone.vue"),
+    [getName("clock")]: () => import("./Clock.vue"),
   },
   computed: {
     getIcon() {

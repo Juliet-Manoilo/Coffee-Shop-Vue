@@ -4,6 +4,7 @@ import router from './router'
 import VueSplide from '@splidejs/vue-splide';
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+
 Vue.use( VueSplide );
 
 Vue.use(VueGoogleMaps, {

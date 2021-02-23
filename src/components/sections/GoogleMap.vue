@@ -9,7 +9,7 @@
     >
       <GmapMarker
         :key="index"
-        v-for="(m, index) in markers"
+        v-for="(m, index) in locations"
         :position="m.position"
         :clickable="true"
         :draggable="true"

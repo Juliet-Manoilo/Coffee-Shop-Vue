@@ -1,20 +1,35 @@
 <template>
   <section class="app">
     <header class="header">
-      <router-link class="header__logo-link" to="/">coffee shop</router-link>
-      <div class="header__nav">
-        <router-link to="/" class="header__nav-link">Меню</router-link>
-        <router-link to="/beans" class="header__nav-link"
-          >Кофе в зернах</router-link
-        >
-        <router-link to="/contacts" class="header__nav-link"
-          >Контакты</router-link
+      <div class="header__wrapper">
+        <router-link class="header__logo-link" to="/">coffee shop</router-link>
+        <div class="header__nav">
+          <router-link to="/" class="header__nav-link">Меню</router-link>
+          <router-link to="/beans" class="header__nav-link"
+            >Кофе в зернах</router-link
+          >
+          <router-link to="/contacts" class="header__nav-link"
+            >Контакты</router-link
+          >
+        </div>
+        <router-link class="header__contacts-link" to="/contacts"
+          ><Icon icon="location" class="header__icon" />ул. Ришельевская,
+          31</router-link
         >
       </div>
-      <router-link class="header__contacts-link" to="/contacts"
-        ><Icon icon="location" class="header__icon" />ул. Ришельевская,
-        31</router-link
-      >
+      <div class="header__burger-wrapper">
+        <Slide right>
+          <router-link to="/" class="header__nav-link">
+            <span>Меню</span>
+          </router-link>
+          <router-link to="/beans" class="header__nav-link">
+            <span>Кофе в зернах</span>
+          </router-link>
+          <router-link to="/contacts" class="header__nav-link">
+            <span>Контакты</span>
+          </router-link>
+        </Slide>
+      </div>
     </header>
     <router-view />
     <footer class="footer">
@@ -67,10 +82,13 @@
             >
           </div>
           <div class="footer__social-links">
-            <a href="www.instagram.com" class="footer__insta"
+            <a
+              href="http://www.instagram.com"
+              class="footer__insta"
+              target="_blank"
               ><Icon icon="instagram"
             /></a>
-            <a href="www.facebook.com" class="footer__fb"
+            <a href="http://www.facebook.com" class="footer__fb" target="_blank"
               ><Icon icon="facebook"
             /></a>
           </div>
@@ -87,8 +105,9 @@
 
 <script>
 import Icon from "./components/icons/Icons.vue";
+import { Slide } from "vue-burger-menu";
 export default {
-  components: { Icon },
+  components: { Icon, Slide },
 };
 </script>
 
@@ -97,15 +116,27 @@ export default {
 @import "./styles/style.scss";
 .header {
   width: 100%;
-  background-color: $total-black;
-  display: flex;
-  color: $main-color;
-  min-height: 70px;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-  z-index: 10000;
-
+  position: relative;
+  &__wrapper {
+    width: 90%;
+    background-color: $total-black;
+    display: flex;
+    color: $main-color;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    z-index: 10000;
+  }
+  &__burger-wrapper {
+    visibility: hidden;
+    @media (max-width: 1000px) {
+      visibility: visible;
+      position: absolute;
+      top: -20%;
+      right: 0;
+    }
+  }
   &__logo-link {
     text-transform: uppercase;
     font-size: $nav-logo;
@@ -124,6 +155,9 @@ export default {
     font-size: $nav;
     font-weight: 400;
     padding-left: 20px;
+    @media (max-width: 1000px) {
+      visibility: hidden;
+    }
   }
   &__icon {
     margin-right: 10px;
@@ -134,6 +168,9 @@ export default {
     z-index: 100;
     &:hover .header__icon {
       transform: scale(1.5);
+    }
+    @media (max-width: 1000px) {
+      visibility: hidden;
     }
   }
   &__nav-link:hover {
@@ -268,6 +305,19 @@ export default {
     right: 0;
     bottom: -20%;
   }
+}
+
+.bm-burger-bars {
+  background-color: $main-color;
+}
+
+.bm-cross {
+  background: $main-color;
+}
+
+.bm-menu {
+  height: 50%;
+  background-color: $black;
 }
 </style>
 
