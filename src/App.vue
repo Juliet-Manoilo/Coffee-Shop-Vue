@@ -319,6 +319,10 @@ export default {
   height: 50%;
   background-color: $black;
 }
+
+.bm-item-list {
+  color: $main-color;
+}
 </style>
 
 

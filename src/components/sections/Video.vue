@@ -37,6 +37,7 @@ export default {
   font-weight: 500;
   z-index: 100;
   margin-bottom: 50px;
+  background-image: url("/assets/slide2.png");
   &__bcg {
     width: 100%;
     z-index: 100;
@@ -56,11 +57,17 @@ export default {
     font-size: $logo;
     font-family: $logo-font;
     letter-spacing: 2px;
+    @media (max-width: 1000px) {
+      font-size: $mobile-subtitle;
+    }
   }
   &__title {
     font-size: $title;
     font-family: $title-font;
     font-weight: 500;
+    @media (max-width: 1000px) {
+      font-size: $nav-logo;
+    }
   }
   &__description {
     font-size: $nav-logo;

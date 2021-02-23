@@ -1,6 +1,5 @@
 <template>
   <section class="form">
-    <Icon icon="tracery" class="form__icon" />
     <div class="form__wrapper">
       <h1 class="form__title">с удовольствием поможем подобрать лучший кофе</h1>
       <form action="#" method="POST" class="form__post">

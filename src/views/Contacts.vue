@@ -135,6 +135,7 @@ export default {
   &__adresses {
     display: flex;
     width: 80%;
+    justify-content: space-between;
   }
   &__col {
     min-width: 27%;
@@ -143,6 +144,7 @@ export default {
     flex-direction: column;
     justify-content: space-around;
     color: $white;
+    margin-right: 30px;
     &--social {
       color: $main-color;
       display: flex;
