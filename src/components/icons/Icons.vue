@@ -23,6 +23,7 @@ export default {
     [getName("arrow")]: () => import("./Arrow.vue"),
     [getName("facebook")]: () => import("./Facebook.vue"),
     [getName("instagram")]: () => import("./Instagram.vue"),
+    [getName("arrow-left")]: () => import("./Arrow-left.vue"),
   },
   computed: {
     getIcon() {

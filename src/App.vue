@@ -3,7 +3,7 @@
     <header class="header">
       <router-link class="header__logo-link" to="/">coffee shop</router-link>
       <div class="header__nav">
-        <a href="#menu-list" class="header__nav-link">Меню</a>
+        <router-link to="/" class="header__nav-link">Меню</router-link>
         <router-link to="/beans" class="header__nav-link"
           >Кофе в зернах</router-link
         >
@@ -70,7 +70,9 @@
             <a href="www.instagram.com" class="footer__insta"
               ><Icon icon="instagram"
             /></a>
-            <a href="www.facebook.com"><Icon icon="facebook" /></a>
+            <a href="www.facebook.com" class="footer__fb"
+              ><Icon icon="facebook"
+            /></a>
           </div>
         </div>
         <Icon icon="tracery" class="footer__icon" />
@@ -102,6 +104,7 @@ export default {
   justify-content: space-around;
   align-items: center;
   margin: auto;
+  z-index: 10000;
 
   &__logo-link {
     text-transform: uppercase;
@@ -128,6 +131,7 @@ export default {
   &__contacts-link {
     align-items: center;
     display: flex;
+    z-index: 100;
     &:hover .header__icon {
       transform: scale(1.5);
     }
@@ -139,6 +143,7 @@ export default {
 
 .app {
   background-color: $black;
+  z-index: 10000;
 }
 
 .footer {
@@ -189,7 +194,8 @@ export default {
     font-size: $nav-logo;
     z-index: 100;
     &:hover {
-      transform: scale(1.1);
+      color: $main-color;
+      font-weight: 600;
       transition: 0.1s ease;
     }
   }
@@ -240,10 +246,19 @@ export default {
   }
   &__insta {
     margin-right: 20px;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.1s ease;
+    }
+  }
+  &__fb:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease;
   }
   &__nav-link {
     &:hover {
-      transform: scale(1.1);
+      color: $main-color;
+      font-weight: 600;
       transition: 0.1s ease;
     }
   }

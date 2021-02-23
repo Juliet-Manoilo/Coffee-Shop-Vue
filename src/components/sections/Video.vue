@@ -36,7 +36,7 @@ export default {
   position: relative;
   font-weight: 500;
   z-index: 100;
-
+  margin-bottom: 50px;
   &__bcg {
     width: 100%;
     z-index: 100;
