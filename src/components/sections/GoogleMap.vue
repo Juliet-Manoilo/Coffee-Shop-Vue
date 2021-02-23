@@ -3,6 +3,7 @@
     <GmapMap
       :center="{ lat: 46.4766219783261, lng: 30.740220069130373 }"
       :zoom="16"
+      :options="options"
       map-type-id="terrain"
       style="width: 100%; height: 900px"
     >
