@@ -146,6 +146,9 @@ export default {
     &:hover {
       transform: scale(1.1);
     }
+    @media (max-width: 1000px) {
+      width: 250px;
+    }
   }
   &__nav {
     width: 33%;
@@ -156,7 +159,7 @@ export default {
     font-weight: 400;
     padding-left: 20px;
     @media (max-width: 1000px) {
-      visibility: hidden;
+      display: none;
     }
   }
   &__icon {
@@ -318,6 +321,9 @@ export default {
 .bm-menu {
   height: 50%;
   background-color: $black;
+  @media (max-width: 1000px) {
+    height: 75%;
+  }
 }
 
 .bm-item-list {

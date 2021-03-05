@@ -23,8 +23,6 @@
 <script>
 export default {
   name: "Video",
-  // props: {
-  // msg: String
 };
 </script>
 
@@ -37,10 +35,16 @@ export default {
   font-weight: 500;
   z-index: 100;
   margin-bottom: 50px;
-  background-image: url("/assets/slide2.png");
+  background-image: url("/src/assets/slide2.png");
+  @media (max-width: 1000px) {
+    min-height: 90vh;
+  }
   &__bcg {
     width: 100%;
     z-index: 100;
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
   &__content {
     position: absolute;
@@ -58,7 +62,7 @@ export default {
     font-family: $logo-font;
     letter-spacing: 2px;
     @media (max-width: 1000px) {
-      font-size: $mobile-subtitle;
+      font-size: $subtitle;
     }
   }
   &__title {
@@ -66,18 +70,28 @@ export default {
     font-family: $title-font;
     font-weight: 500;
     @media (max-width: 1000px) {
-      font-size: $nav-logo;
+      font-size: $mobile-title;
+      text-align: center;
     }
   }
   &__description {
     font-size: $nav-logo;
     font-weight: 700;
+    @media (max-width: 1000px) {
+      text-align: center;
+      font-size: $nav;
+    }
   }
   &__buttons {
     display: flex;
     width: 30%;
     justify-content: space-around;
     margin: auto;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
   }
   &__link {
     width: 100%;
@@ -99,6 +113,12 @@ export default {
     &:hover {
       background-color: $main-color;
       color: $black;
+    }
+    @media (max-width: 1000px) {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

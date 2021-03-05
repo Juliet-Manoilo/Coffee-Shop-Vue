@@ -61,6 +61,10 @@ export default {
     margin: auto;
     text-align: center;
     flex-wrap: wrap;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item {
     width: 31%;
@@ -76,6 +80,9 @@ export default {
       transform: rotate(20deg);
       transition: 0.5s ease;
     }
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
   }
   &__icon {
     transform: rotate(135.06deg) scaleX(-1);
@@ -83,6 +90,9 @@ export default {
     position: absolute;
     left: -130px;
     top: -250px;
+    @media (max-width: 1000px) {
+      visibility: hidden;
+    }
   }
   &__title {
     width: 75%;
