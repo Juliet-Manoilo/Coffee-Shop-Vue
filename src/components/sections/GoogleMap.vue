@@ -1,8 +1,8 @@
 <template>
   <div class="map">
     <GmapMap
-      :center="{ lat: 46.4766219783261, lng: 30.740220069130373 }"
-      :zoom="16"
+      :center="{ lat: 46.47283123588844, lng: 30.739238197961864 }"
+      :zoom="zoom"
       :options="options"
       map-type-id="terrain"
       style="width: 100%; height: 900px"
@@ -10,7 +10,10 @@
       <GmapMarker
         :key="index"
         v-for="(m, index) in locations"
-        :position="m.position"
+        :position="{
+          lat: parseFloat(m.lat),
+          lng: parseFloat(m.lng),
+        }"
         :clickable="true"
         :draggable="true"
         @click="center = m.position"
@@ -20,7 +23,7 @@
   </div>
 </template>
 
-<scriptпш>
+<script>
 export default {
   name: "Map",
   props: {
@@ -36,7 +39,7 @@ export default {
     zoomVal: {
       type: Number,
       default: function () {
-        return 16;
+        return 15;
       },
     },
   },
@@ -58,6 +61,8 @@ export default {
           lat: 46.4766219783261,
           lng: 30.740220069130373,
         },
+        { lat: 46.48471380039353, lng: 30.732291699816482 },
+        { lat: 46.46126219467505, lng: 30.71419491145259 },
       ],
     };
   },

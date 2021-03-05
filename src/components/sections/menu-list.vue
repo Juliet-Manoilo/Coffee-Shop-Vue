@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-      <img src="@/assets/menu2.png" alt="coffee" class="menu__img" />
+      <img src="@/assets/menu4.png" alt="coffee" class="menu__img" />
     </div>
     <div class="menu__icon-wrapper--last">
       <Icon icon="tracery" class="menu__icon--last" />
