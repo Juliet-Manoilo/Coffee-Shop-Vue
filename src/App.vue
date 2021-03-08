@@ -200,16 +200,25 @@ export default {
     left: -10%;
     transform: rotate(156deg);
     z-index: 0;
+    @media (max-width: 1000px) {
+      bottom: -50%;
+    }
     &--second {
       position: absolute;
       bottom: -63%;
       right: 10%;
       transform: rotate(100deg);
       z-index: 0;
+      @media (max-width: 1000px) {
+        display: none;
+      }
     }
     &--third {
       transform: rotate(25deg) translateX(160px);
       z-index: 0;
+      @media (max-width: 1000px) {
+        display: none;
+      }
     }
   }
   &__content-wrapper {
@@ -326,7 +335,7 @@ export default {
   }
 }
 
-.bm-item-list {
+.bm-item-list > * > span {
   color: $main-color;
 }
 </style>

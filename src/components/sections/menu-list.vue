@@ -139,6 +139,10 @@ export default {
     margin: auto;
     display: inline-block;
     z-index: 10;
+    @media (max-width: 1000px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__icon-title {
     margin-right: 25px;
@@ -147,6 +151,10 @@ export default {
     display: flex;
     width: 90%;
     margin: auto;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__subtitle-name {
@@ -241,6 +249,9 @@ export default {
       z-index: 0;
       height: 600px;
     }
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   &__img {
@@ -249,6 +260,14 @@ export default {
     z-index: 10;
     &--right {
       align-items: flex-end;
+      @media (max-width: 1000px) {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 }

@@ -81,6 +81,9 @@ export default {
     font-family: $title-font;
     font-size: $title;
     font-weight: 600;
+    @media (max-width: 1000px) {
+      font-size: $logo;
+    }
   }
   &__link {
     width: 240px;
@@ -125,6 +128,13 @@ export default {
     :hover {
       transform: translatey(-5px);
       transition: 0.1s ease;
+    }
+    @media (max-width: 1000px) {
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      border: none;
     }
   }
 }

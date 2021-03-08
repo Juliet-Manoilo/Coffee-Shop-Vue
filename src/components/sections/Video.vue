@@ -35,9 +35,11 @@ export default {
   font-weight: 500;
   z-index: 100;
   margin-bottom: 50px;
-  background-image: url("/src/assets/slide2.png");
+
   @media (max-width: 1000px) {
     min-height: 90vh;
+    background-image: url("./slide2.png");
+    background-position: center;
   }
   &__bcg {
     width: 100%;
@@ -116,6 +118,7 @@ export default {
     }
     @media (max-width: 1000px) {
       margin-bottom: 10px;
+      margin-right: 0;
       &:last-child {
         margin-bottom: 0;
       }

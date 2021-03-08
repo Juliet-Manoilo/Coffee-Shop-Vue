@@ -54,6 +54,9 @@ export default {
   width: 90%;
   margin: auto;
   margin-bottom: 60px;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
   &__list {
     display: flex;
     justify-content: space-between;
