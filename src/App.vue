@@ -47,7 +47,7 @@
         </div>
         <div class="footer__col-nav">
           <div class="footer__nav-links">
-            <a href="#menu-list" class="footer__nav-link">меню</a>
+            <router-link to="/" class="footer__nav-link">меню</router-link>
             <router-link to="/beans" class="footer__nav-link">
               кофе в зернах
             </router-link>
