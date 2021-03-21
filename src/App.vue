@@ -194,6 +194,9 @@ export default {
   position: relative;
   background-color: $total-black;
   padding-top: 3%;
+  @media (max-width: 1000px) {
+    height: 50vh;
+  }
   &__icon {
     position: absolute;
     bottom: -20%;
@@ -201,7 +204,8 @@ export default {
     transform: rotate(156deg);
     z-index: 0;
     @media (max-width: 1000px) {
-      bottom: -50%;
+      bottom: -98%;
+      transform: rotate(150deg);
     }
     &--second {
       position: absolute;
@@ -236,6 +240,9 @@ export default {
     height: 90%;
     justify-content: space-between;
     width: 20%;
+    @media (max-width: 1000px) {
+      width: 40%;
+    }
   }
   &__logo {
     text-transform: uppercase;
@@ -266,6 +273,10 @@ export default {
     justify-content: space-between;
     height: 80%;
     z-index: 100;
+    @media (max-width: 1000px) {
+      width: 40%;
+      height: 90%;
+    }
   }
   &__nav-links {
     display: flex;
@@ -286,6 +297,9 @@ export default {
     justify-content: space-between;
     height: 80%;
     z-index: 100;
+    @media (max-width: 1000px) {
+      width: 40%;
+    }
   }
   &__adresses {
     display: flex;

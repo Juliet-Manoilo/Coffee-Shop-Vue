@@ -24,7 +24,8 @@
         </div>
       </div>
     </div>
-    <div class="menu__row">
+    <div class="menu__row--reverse">
+      <img src="@/assets/menu2.png" alt="coffee" class="menu__img" />
       <div class="menu__content">
         <h3 class="menu__subtitle-name">
           <Icon icon="icecoffee" class="menu__icon-title" />Кофе со льдом
@@ -41,7 +42,6 @@
           </div>
         </div>
       </div>
-      <img src="@/assets/menu2.png" alt="coffee" class="menu__img" />
     </div>
     <Icon icon="tracery" class="menu__icon--second" />
     <div class="menu__row">
@@ -60,7 +60,8 @@
         </div>
       </div>
     </div>
-    <div class="menu__row">
+    <div class="menu__row--reverse">
+      <img src="@/assets/menu4.png" alt="coffee" class="menu__img" />
       <div class="menu__content">
         <h3 class="menu__subtitle-name">
           <Icon icon="bakery" class="menu__icon-title" />Выпечка
@@ -76,7 +77,6 @@
           </div>
         </div>
       </div>
-      <img src="@/assets/menu4.png" alt="coffee" class="menu__img" />
     </div>
     <div class="menu__icon-wrapper--last">
       <Icon icon="tracery" class="menu__icon--last" />
@@ -131,6 +131,9 @@ export default {
     }
     &--last {
       transform: rotate(270deg) translateY(130px);
+      @media (max-width: 820px) {
+        display: none;
+      }
     }
   }
   &__content {
@@ -140,7 +143,7 @@ export default {
     display: inline-block;
     z-index: 10;
     @media (max-width: 1000px) {
-      width: 100%;
+      width: 90%;
       margin-bottom: 20px;
     }
   }
@@ -154,6 +157,16 @@ export default {
     @media (max-width: 1000px) {
       flex-direction: column;
       width: 100%;
+    }
+    &--reverse {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      flex-direction: row-reverse;
+      @media (max-width: 1000px) {
+        flex-direction: column;
+        width: 100%;
+      }
     }
   }
 

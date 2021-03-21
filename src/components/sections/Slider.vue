@@ -82,7 +82,7 @@ export default {
     font-size: $title;
     font-weight: 600;
     @media (max-width: 1000px) {
-      font-size: $logo;
+      font-size: $subtitle;
     }
   }
   &__link {
