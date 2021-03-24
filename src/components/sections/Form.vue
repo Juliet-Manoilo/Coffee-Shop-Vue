@@ -52,11 +52,9 @@ export default {
   position: relative;
   color: $main-color;
   padding-top: 5%;
-  z-index: 100;
   &__wrapper {
     width: 90%;
     margin: auto;
-    z-index: 10000;
   }
   &__icon {
     position: absolute;
@@ -66,6 +64,11 @@ export default {
     z-index: 0;
     &--right {
       transform: translateX(100px);
+      z-index: 0;
+      @media (max-width: 1000px) {
+        transform: translateX(250px);
+        z-index: 0;
+      }
     }
   }
   &__title {
@@ -74,7 +77,7 @@ export default {
     font-size: $subtitle;
     font-weight: 600;
     margin-bottom: 100px;
-    z-index: 10000;
+    z-index: 1000;
   }
   &__input {
     width: 620px;
@@ -87,6 +90,10 @@ export default {
     padding-left: 15px;
     color: $coffee;
     border-radius: 5px;
+    z-index: 100;
+    @media (max-width: 700px) {
+      width: 320px;
+    }
     &:hover {
       border: 1px solid $coffee;
       box-shadow: 0px 5px 10px -5px rgba(248, 245, 245, 0.5);
@@ -112,6 +119,9 @@ export default {
       font-weight: 600;
       cursor: pointer;
       border-radius: 5px;
+      @media (max-width: 1000px) {
+        width: 320px;
+      }
       &:hover {
         background-color: $black;
         color: $main-color;
@@ -131,6 +141,10 @@ export default {
     position: absolute;
     right: 0;
     top: 30%;
+    z-index: 0;
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 }
 </style>

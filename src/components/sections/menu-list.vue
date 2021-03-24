@@ -128,6 +128,9 @@ export default {
       top: 37%;
       transform: rotate(196deg);
       z-index: 0;
+      @media (max-width: 820px) {
+        display: none;
+      }
     }
     &--last {
       transform: rotate(270deg) translateY(130px);

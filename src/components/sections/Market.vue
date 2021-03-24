@@ -41,9 +41,11 @@ export default {
     margin: auto;
     margin-bottom: 50px;
     color: $main-color;
+    z-index: 100;
   }
   &__icon {
     transform: rotate(300deg) translateX(140px) translateY(15px);
+    z-index: 0;
   }
   &__icon-wrapper {
     position: absolute;
@@ -55,6 +57,7 @@ export default {
   }
   &__breadcrumb {
     margin-right: 5px;
+    z-index: 1000;
     &:last-child {
       margin-right: 0;
     }

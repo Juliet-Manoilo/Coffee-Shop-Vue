@@ -117,9 +117,9 @@ export default {
 .header {
   width: 100%;
   position: relative;
+  background-color: $total-black;
   &__wrapper {
     width: 90%;
-    background-color: $total-black;
     display: flex;
     color: $main-color;
     min-height: 70px;
@@ -195,7 +195,7 @@ export default {
   background-color: $total-black;
   padding-top: 3%;
   @media (max-width: 1000px) {
-    height: 50vh;
+    min-height: 50vh;
   }
   &__icon {
     position: absolute;
