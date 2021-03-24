@@ -39,7 +39,7 @@ export default {
     zoomVal: {
       type: Number,
       default: function () {
-        return 14;
+        return 14.5;
       },
     },
   },
@@ -59,7 +59,15 @@ export default {
             elementType: "geometry",
             stylers: [
               {
-                color: "#0f1114",
+                color: "#212121",
+              },
+            ],
+          },
+          {
+            elementType: "labels.icon",
+            stylers: [
+              {
+                visibility: "off",
               },
             ],
           },
@@ -67,7 +75,7 @@ export default {
             elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#787878",
+                color: "#757575",
               },
             ],
           },
@@ -75,7 +83,16 @@ export default {
             elementType: "labels.text.stroke",
             stylers: [
               {
-                color: "#18191b",
+                color: "#212121",
+              },
+            ],
+          },
+          {
+            featureType: "administrative",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#757575",
               },
             ],
           },
@@ -84,7 +101,7 @@ export default {
             elementType: "geometry.stroke",
             stylers: [
               {
-                color: "#4285f4",
+                color: "#9e9e9e",
               },
             ],
           },
@@ -93,43 +110,16 @@ export default {
             elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#9e9e9e",
+                visibility: "off",
               },
             ],
           },
           {
-            featureType: "administrative.province",
-            elementType: "geometry.stroke",
+            featureType: "administrative.locality",
+            elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#4285f4",
-              },
-            ],
-          },
-          {
-            featureType: "landscape.man_made",
-            elementType: "geometry.stroke",
-            stylers: [
-              {
-                color: "#4285f4",
-              },
-            ],
-          },
-          {
-            featureType: "landscape.natural",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#023e58",
-              },
-            ],
-          },
-          {
-            featureType: "poi",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#283d6a",
+                color: "#bdbdbd",
               },
             ],
           },
@@ -138,25 +128,17 @@ export default {
             elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#8f8f8f",
+                color: "#757575",
               },
             ],
           },
-          {
-            featureType: "poi",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#000000",
-              },
-            ],
-          },
+
           {
             featureType: "poi.park",
-            elementType: "geometry.fill",
+            elementType: "geometry",
             stylers: [
               {
-                color: "#101e1e",
+                color: "#181818",
               },
             ],
           },
@@ -165,109 +147,83 @@ export default {
             elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#3C7680",
+                color: "#616161",
+              },
+            ],
+          },
+          {
+            featureType: "poi.park",
+            elementType: "labels.text.stroke",
+            stylers: [
+              {
+                color: "#1b1b1b",
               },
             ],
           },
           {
             featureType: "road",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#292f38",
-              },
-            ],
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#5d6674",
-              },
-            ],
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#000000",
-              },
-            ],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry",
-            stylers: [
-              {
-                color: "#293b51",
-              },
-            ],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [
-              {
-                color: "#0b0b0f",
-              },
-            ],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#b0d5ce",
-              },
-            ],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#023e58",
-              },
-            ],
-          },
-          {
-            featureType: "transit",
-            elementType: "labels.text.fill",
-            stylers: [
-              {
-                color: "#98a5be",
-              },
-            ],
-          },
-          {
-            featureType: "transit",
-            elementType: "labels.text.stroke",
-            stylers: [
-              {
-                color: "#1d2c4d",
-              },
-            ],
-          },
-          {
-            featureType: "transit.line",
             elementType: "geometry.fill",
             stylers: [
               {
-                color: "#283d6a",
+                color: "#2c2c2c",
               },
             ],
           },
           {
-            featureType: "transit.station",
-            elementType: "geometry",
+            featureType: "road",
+            elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#3a4762",
+                color: "#8a8a8a",
               },
             ],
           },
+          {
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#373737",
+              },
+            ],
+          },
+          {
+            featureType: "road.highway",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#3c3c3c",
+              },
+            ],
+          },
+          {
+            featureType: "road.highway.controlled_access",
+            elementType: "geometry",
+            stylers: [
+              {
+                color: "#4e4e4e",
+              },
+            ],
+          },
+          {
+            featureType: "road.local",
+            elementType: "labels.text.fill",
+            stylers: [
+              {
+                color: "#616161",
+              },
+            ],
+          },
+          {
+            featureType: "transit",
+            elementType: "labels.text.fill",
+            stylers: [
+              {
+                color: "#757575",
+              },
+            ],
+          },
+
           {
             featureType: "water",
             elementType: "geometry",
@@ -282,7 +238,7 @@ export default {
             elementType: "labels.text.fill",
             stylers: [
               {
-                color: "#354245",
+                color: "#3d3d3d",
               },
             ],
           },
@@ -299,11 +255,7 @@ export default {
       ],
     };
   },
-  mounted() {
-    console.log(this.locations);
-  },
+  mounted() {},
 };
 </script>
 
-<style lang="scss">
-</style>
