@@ -187,7 +187,7 @@ export default {
 }
 
 .footer {
-  height: 30vh;
+  min-height: 30vh;
   color: $footer-color;
   overflow: hidden;
   font-size: $footer;
@@ -197,6 +197,17 @@ export default {
   @media (max-width: 1000px) {
     min-height: 50vh;
   }
+  @media (max-width: 960px) {
+    min-height: 50vh;
+    font-size: $btn;
+  }
+  @media (max-width: 772px) {
+    font-size: $nav;
+    min-height: 40vh;
+  }
+  @media (max-width: 556px) {
+    font-size: $nav-logo;
+  }
   &__icon {
     position: absolute;
     bottom: -20%;
@@ -204,7 +215,11 @@ export default {
     transform: rotate(156deg);
     z-index: 0;
     @media (max-width: 1000px) {
-      bottom: -98%;
+      bottom: -45%;
+      transform: rotate(150deg);
+    }
+    @media (max-width: 772px) {
+      bottom: -30%;
       transform: rotate(150deg);
     }
     &--second {
@@ -233,6 +248,9 @@ export default {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 556px) {
+      flex-wrap: wrap;
+    }
   }
   &__copyright {
     display: inline-flex;
@@ -242,6 +260,9 @@ export default {
     width: 20%;
     @media (max-width: 1000px) {
       width: 40%;
+    }
+    @media (max-width: 960px) {
+      display: none;
     }
   }
   &__logo {
@@ -277,18 +298,51 @@ export default {
       width: 40%;
       height: 90%;
     }
+    @media (max-width: 772px) {
+      width: 45%;
+      height: 70%;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    @media (max-width: 556px) {
+      width: 90%;
+      height: 70%;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
   &__nav-links {
     display: flex;
     flex-direction: column;
     height: 30%;
     justify-content: space-between;
+    @media (max-width: 772px) {
+      margin-bottom: 50px;
+      justify-content: flex-start;
+      :first-child {
+        margin-bottom: 30px;
+      }
+    }
+    @media (max-width: 556px) {
+      align-items: center;
+      margin-bottom: 10px;
+    }
   }
   &__time {
     display: flex;
     flex-direction: column;
     height: 30%;
     justify-content: space-between;
+    @media (max-width: 772px) {
+      margin-bottom: 50px;
+      justify-content: flex-start;
+      :first-child {
+        margin-bottom: 30px;
+      }
+    }
+    @media (max-width: 556px) {
+      align-items: center;
+    }
   }
   &__contacts {
     width: 20%;
@@ -300,12 +354,34 @@ export default {
     @media (max-width: 1000px) {
       width: 40%;
     }
+    @media (max-width: 772px) {
+      width: 45%;
+      height: 70%;
+      justify-content: flex-start;
+    }
+    @media (max-width: 556px) {
+      width: 90%;
+      height: 70%;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
   &__adresses {
     display: flex;
     flex-direction: column;
     height: 25%;
     justify-content: space-between;
+    @media (max-width: 772px) {
+      justify-content: flex-start;
+      margin-bottom: 30px;
+      :first-child {
+        margin-bottom: 10px;
+      }
+    }
+    @media (max-width: 556px) {
+      align-items: center;
+      text-align: center;
+    }
   }
   &__insta {
     margin-right: 20px;
@@ -324,12 +400,20 @@ export default {
       font-weight: 600;
       transition: 0.1s ease;
     }
+    @media (max-width: 772px) {
+      margin-bottom: 30px;
+    }
   }
   &__icon-wrapper {
     position: absolute;
     overflow: hidden;
     right: 0;
     bottom: -20%;
+  }
+  &__social-links {
+    @media (max-width: 556px) {
+      margin-bottom: 30px;
+    }
   }
 }
 
